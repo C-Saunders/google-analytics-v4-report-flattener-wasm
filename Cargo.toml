@@ -1,0 +1,19 @@
+[package]
+name = "google-analytics-v4-report-flattener-wasm"
+version = "0.1.0"
+authors = ["Charlie Saunders <charlieasaunders@gmail.com>"]
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+ga-v4-flattener = "0.1.1"
+serde = "1.0"
+serde_json = "1.0"
+wasm-bindgen = "0.2"
+console_error_panic_hook = "0.1.1"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"

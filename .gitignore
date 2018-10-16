@@ -1,0 +1,5 @@
+/target
+/bin
+/pkg
+**/*.rs.bk
+wasm-pack.log
