@@ -21,7 +21,7 @@ JSON.parse(toDelimited(JSON.stringify(data), ","))
 
 ### `toFlatJson(data: string): string`
 ```ts
-const { toDelimited } = require('google-analytics-v4-report-flattener-wasm')
+const { toFlatJson } = require('google-analytics-v4-report-flattener-wasm')
 const data = require('./test.json')
 
 JSON.parse(toFlatJson(JSON.stringify(data))
