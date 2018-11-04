@@ -19,8 +19,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "ga-v4-flattener"
-version = "0.2.1"
-source = "git+https://github.com/C-Saunders/google_analytics_v4_report_flattener#da61df55efe60f87cf04940dbc6e977bc3c17b53"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "itertools 0.7.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.80 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -33,7 +33,7 @@ name = "google-analytics-v4-report-flattener-wasm"
 version = "0.2.0"
 dependencies = [
  "console_error_panic_hook 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "ga-v4-flattener 0.2.1 (git+https://github.com/C-Saunders/google_analytics_v4_report_flattener)",
+ "ga-v4-flattener 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.80 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.32 (registry+https://github.com/rust-lang/crates.io-index)",
  "wasm-bindgen 0.2.25 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -192,7 +192,7 @@ dependencies = [
 "checksum cfg-if 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)" = "0c4e7bb64a8ebb0d856483e1e682ea3422f883c5f5615a90d51a2c82fe87fdd3"
 "checksum console_error_panic_hook 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)" = "6c5dd2c094474ec60a6acaf31780af270275e3153bafff2db5995b715295762e"
 "checksum either 1.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = "3be565ca5c557d7f59e7cfcf1844f9e3033650c929c6566f511e8005f205c1d0"
-"checksum ga-v4-flattener 0.2.1 (git+https://github.com/C-Saunders/google_analytics_v4_report_flattener)" = "<none>"
+"checksum ga-v4-flattener 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "9ce07db6e0e32ee0efe96843ccba1d8042d3883497b49b4b8b7335ed5d16706f"
 "checksum itertools 0.7.8 (registry+https://github.com/rust-lang/crates.io-index)" = "f58856976b776fedd95533137617a02fb25719f40e7d9b01c7043cd65474f450"
 "checksum itoa 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)" = "1306f3464951f30e30d12373d31c79fbd52d236e5e896fd92f96ec7babbbe60b"
 "checksum lazy_static 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ca488b89a5657b0a2ecd45b95609b3e848cf1755da332a0da46e2b2b1cb371a7"
