@@ -4,27 +4,42 @@ Converts Google Analytics API v4 reports to flat/delimited data.
 
 This is a wrapper around [this Rust package](https://crates.io/crates/ga-v4-flattener) to make it available as a WebAssembly package. Credit to [wasm-pack](https://github.com/rustwasm/wasm-pack) for doing the hard work for the wasm compilation.
 
-### Important Note
-From what I can see, Web Assembly can't return objects right now, so we need to JSON `stringify` and then `parse`, unfortunately.
-
 ## API
 
-### `toDelimited(data: string, delimiter: string): string`
+### `toDelimited(data: string, delimiter: string): Array<string>`
+### `parsedtoFlatJson(data: Array<Report>, delimiter: string): Array<string>`
 ```ts
-const { toDelimited } = require('google-analytics-v4-report-flattener-wasm')
+const { toDelimited, parsedToDelimited } = require('google-analytics-v4-report-flattener-wasm')
 const data = require('./test.json')
 
-JSON.parse(toDelimited(JSON.stringify(data), ","))
+// if you did not parse the response from Google, use this
+// (you wouln't need to stringify first)
+toDelimited(JSON.stringify(data), ',')
+
+// if you parsed the JSON response in JavaScript already
+// for example, if the library does it or you need to inspect it
+parsedToDelimited(data, ',')
+
+// the result is an array in either case, starting with v0.2
 [ '"ga:deviceCategory","ga:sessions","ga:bounces"\n"desktop",25,17\n"mobile",2,2\n',
   '"ga:country","ga:sessions","ga:bounces"\n"Azerbaijan",1,0\n"France",18,11\n"Japan",4,4\n"Switzerland",1,1\n"United States",3,3\n' ]
 ```
 
-### `toFlatJson(data: string): string`
+### `toFlatJson(data: string): Arrray<{ [field: string]: number | string }>`
+### `parsedtoFlatJson(data: Array<Report>): Arrray<{ [field: string]: number | string }>`
 ```ts
-const { toFlatJson } = require('google-analytics-v4-report-flattener-wasm')
+const { toFlatJson, parsedtoFlatJson } = require('google-analytics-v4-report-flattener-wasm')
 const data = require('./test.json')
 
-JSON.parse(toFlatJson(JSON.stringify(data))
+// if you did not parse the response from Google, use this
+// (you wouln't need to stringify first)
+toFlatJson(JSON.stringify(data))
+
+// if you parsed the JSON response in JavaScript already
+// for example, if the library does it or you need to inspect it
+parsedtoFlatJson(data)
+
+// the result is an array in either case, starting with v0.2
 [
   [{
       'ga:bounces': 17,
