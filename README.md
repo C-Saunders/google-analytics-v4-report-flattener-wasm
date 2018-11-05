@@ -26,9 +26,9 @@ parsedToDelimited(data, ',')
 ```
 
 ### `toFlatJson(data: string): Arrray<{ [field: string]: number | string }>`
-### `parsedtoFlatJson(data: Array<Report>): Arrray<{ [field: string]: number | string }>`
+### `parsedToFlatJson(data: Array<Report>): Arrray<{ [field: string]: number | string }>`
 ```ts
-const { toFlatJson, parsedtoFlatJson } = require('google-analytics-v4-report-flattener-wasm')
+const { toFlatJson, parsedToFlatJson } = require('google-analytics-v4-report-flattener-wasm')
 const data = require('./test.json')
 
 // if you did not parse the response from Google, use this
@@ -37,7 +37,7 @@ toFlatJson(JSON.stringify(data))
 
 // if you parsed the JSON response in JavaScript already
 // for example, if the library does it or you need to inspect it
-parsedtoFlatJson(data)
+parsedToFlatJson(data)
 
 // the result is an array in either case, starting with v0.2
 [

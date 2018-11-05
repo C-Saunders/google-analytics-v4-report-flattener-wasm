@@ -41,7 +41,7 @@ pub fn toFlatJson(data: &str) -> JsValue {
 
 #[wasm_bindgen]
 #[allow(non_snake_case)]
-pub fn parsedtoFlatJson(param_data: &JsValue) -> JsValue {
+pub fn parsedToFlatJson(param_data: &JsValue) -> JsValue {
     set_panic_hook();
 
     let data: ReportResponse = param_data.into_serde().unwrap();
