@@ -12,12 +12,11 @@ This is a wrapper around [this Rust package](https://crates.io/crates/ga-v4-flat
 const { toDelimited, parsedToDelimited } = require('google-analytics-v4-report-flattener-wasm')
 const data = require('./test.json')
 
-// if you did not parse the response from Google, use this
-// (you wouln't need to stringify first)
+// if you have a string
 toDelimited(JSON.stringify(data), ',')
 
-// if you parsed the JSON response in JavaScript already
-// for example, if the library does it or you need to inspect it
+// if you parsed the JSON in JavaScript already, for example,
+// if your request library parses automatically
 parsedToDelimited(data, ',')
 
 // the result is an array in either case, starting with v0.2
@@ -31,12 +30,11 @@ parsedToDelimited(data, ',')
 const { toFlatJson, parsedToFlatJson } = require('google-analytics-v4-report-flattener-wasm')
 const data = require('./test.json')
 
-// if you did not parse the response from Google, use this
-// (you wouln't need to stringify first)
+// if you have a string
 toFlatJson(JSON.stringify(data))
 
-// if you parsed the JSON response in JavaScript already
-// for example, if the library does it or you need to inspect it
+// if you parsed the JSON in JavaScript already, for example,
+// if your request library parses automatically
 parsedToFlatJson(data)
 
 // the result is an array in either case, starting with v0.2

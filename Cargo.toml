@@ -1,6 +1,6 @@
 [package]
 name = "google-analytics-v4-report-flattener-wasm"
-version = "0.3.0"
+version = "0.4.0"
 authors = ["Charlie Saunders <charlieasaunders@gmail.com>"]
 repository = "https://github.com/C-Saunders/google-analytics-v4-report-flattener-wasm"
 description = "Converts Google Analytics API v4 reports to flat/delimited data."
@@ -10,7 +10,7 @@ license = "MIT"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-ga-v4-flattener = "0.3"
+ga-v4-flattener = "0.4"
 serde = "1.0"
 serde_json = "1.0"
 console_error_panic_hook = "0.1.1"
